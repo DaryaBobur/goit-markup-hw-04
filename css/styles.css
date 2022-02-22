@@ -19,6 +19,9 @@
   --color-bg: #2f303a;
   --color-border-header: #ececec;
   --portfolio-card-border: #eeeeee;
+  --gradient-hero: rgba(47, 48, 58, 0.4);
+  --bgc-hero: #c4c4c4;
+  --color-icons: #afb1b8;
   /* Шрифты макета */
   --primary-font: Roboto, sans-serif;
   --secondary-font: Raleway, sans-serif;
@@ -154,6 +157,8 @@ ul {
 }
 
 .contacts {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -163,15 +168,36 @@ ul {
 .contacts:hover,
 .contacts:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.icon-mail,
+.icon-smartphone {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* Герой */
 
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      var(--gradient-hero),
+      var(--gradient-hero)
+    ),
+    url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  background-color: var(--color-bg);
+  background-color: var(--bgc-hero);
 }
 
 .page-caption {
@@ -208,10 +234,22 @@ ul {
   background-color: var(--bgc-btn);
 }
 /* Наши особенности */
+.feature-list {
+  display: flex;
+}
 .feature-list > .item {
   width: 270px;
 }
+.icon-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
 
+  background-color: var(--color-bg-btn-section);
+  margin-bottom: 30px;
+}
 .feature-list .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -232,10 +270,6 @@ ul {
 
   font-size: 14px;
   line-height: 1.71;
-}
-
-.feature-list {
-  display: flex;
 }
 
 /* Наша сфера деятельности */
@@ -279,7 +313,7 @@ ul {
 }
 
 .team-list .item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .photo {
@@ -302,7 +336,6 @@ ul {
 }
 
 .aside-team {
-  margin-bottom: 0;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -311,6 +344,40 @@ ul {
 .team-card {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+  color: var(--color-icons);
+}
+
+.socials:hover,
+.socials:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+.social-icon {
+  fill: currentColor;
+}
+.social-icon:hover,
+.social-icon:focus {
+  fill: var(--primary-white-color);
 }
 
 /* Футер */
