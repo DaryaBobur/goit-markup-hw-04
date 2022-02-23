@@ -405,6 +405,10 @@ ul {
 }
 
 /* Футер */
+.footer-list {
+  display: flex;
+}
+
 /* Логотип в футере */
 .footer {
   padding-top: 60px;
@@ -463,9 +467,7 @@ ul {
 }
 
 /* Соцсети в футере */
-.footer-list {
-  display: flex;
-}
+
 .more {
   color: var(--primary-white-color);
   margin-bottom: 20px;
